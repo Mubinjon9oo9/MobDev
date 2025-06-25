@@ -12,36 +12,46 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lab1.ui.theme.Lab1Theme
+import android.widget.TextView
+import android.widget.Button
+import android.widget.EditText
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            Lab1Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+
+        val inputNumber = findViewById<EditText>(R.id.inputNumber)
+        val outputText = findViewById<TextView>(R.id.outputText)
+        val button = findViewById<Button>(R.id.showResultButton)
+
+        button.setOnClickListener {
+            val numberText = inputNumber.text.toString()
+            val number = numberText.toDoubleOrNull()
+
+            if (number != null) {
+                val arshin= number*0.7112
+                outputText.text = "$arshin"
+            } else {
+                outputText.text = "Пожалуйста, введите корректное число"
             }
         }
-    }
-}
+        val dayInput = findViewById<EditText>(R.id.dayInput)
+        val dayResult = findViewById<TextView>(R.id.dayResult)
+        val dayButton = findViewById<Button>(R.id.dayButton)
+        dayButton.setOnClickListener {
+            val dayNum = dayInput.text.toString().toIntOrNull()
+            val days = listOf(
+                "Понедельник", "Вторник", "Среда", "Четверг",
+                "Пятница", "Суббота", "Воскресенье"
+            )
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Lab1Theme {
-        Greeting("Android")
+            if (dayNum != null && dayNum in 1..7) {
+                dayResult.text = "День недели: ${days[dayNum - 1]}"
+            } else {
+                dayResult.text = "Введите число от 1 до 7"
+            }
+        }
     }
 }

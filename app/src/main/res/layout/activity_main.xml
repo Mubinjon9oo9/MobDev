@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="24dp"
+              android:gravity="top">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"
+        android:text="First"
+        android:textSize="24sp" android:textStyle="bold"/>
+
+    <!-- Ввод и подпись рядом -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Аршин"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/inputNumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Вывод текста -->
+
+    <!-- Кнопка -->
+    <TextView
+        android:id="@+id/outputText"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:text="Результат"
+        android:textAlignment="center" android:textSize="18sp"/>
+    <Button
+        android:id="@+id/showResultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показать результат"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"/>
+    <!-- Ввод дня недели -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="День недели (1–7):"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dayInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Результат дня недели -->
+    <TextView
+        android:id="@+id/dayResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="День недели: "
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/dayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Определить день недели"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
