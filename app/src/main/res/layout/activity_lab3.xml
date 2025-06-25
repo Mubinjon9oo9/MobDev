@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="24dp">
+
+    <EditText
+        android:id="@+id/inputString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите строку"
+        android:inputType="text"
+        android:maxLines="3"
+        android:scrollHorizontally="false"/>
+
+    <Button
+        android:id="@+id/buttonCountLatin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подсчитать латинские буквы"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Результат будет здесь"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
