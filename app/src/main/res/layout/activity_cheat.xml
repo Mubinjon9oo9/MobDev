@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent" android:padding="24dp"
+              android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/cheatAnswerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ответ будет здесь"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/showAnswerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показать ответ"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/apiLevelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API:"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+</LinearLayout>

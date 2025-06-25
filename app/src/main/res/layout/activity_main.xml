@@ -26,5 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab4" />
+    <Button
+        android:id="@+id/btnLab41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab4_1" />
 
 </LinearLayout>
