@@ -28,7 +28,10 @@
         <activity android:name=".Lab3Activity" />
         <activity android:name=".Lab4Activity" />
         <activity android:name=".Lab4_1Activity" />
+        <activity android:name=".Lab5Activity" />
         <activity android:name=".CheatActivity" />
+        <activity android:name=".ResultActivity" />
+
     </application>
 
 </manifest>
